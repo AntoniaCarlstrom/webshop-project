@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import './css/App.css';
+import Products from './components/Products';
+import Navbar from './components/Navbar';
+import { useState, useEffect } from 'react';
 
-function App() {
+async function getData() {
+  const url = "https://webshop-655ff-default-rtdb.europe-west1.firebasedatabase.app/products.json";
+
+  const res = await fetch(url);
+  const data = await res.json();
+  console.log(data);
+  return data;
+}
+
+export default function App() {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    async function fetchItems() {
+      const data = await getData();
+      setItems(data);
+    }
+
+    fetchItems();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Products initialItems={items} />
     </div>
   );
 }
-
-export default App;

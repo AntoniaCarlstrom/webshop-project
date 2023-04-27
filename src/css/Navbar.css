@@ -1,0 +1,27 @@
+/* * {
+  border: 1px solid red;
+} */
+
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.Navbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+.header {
+  text-align: center;
+  flex-basis: 90%;
+
+}
+
+.links {
+  display: flex;
+  align-items: flex-end;
+  margin: 0 200px 40px;
+}

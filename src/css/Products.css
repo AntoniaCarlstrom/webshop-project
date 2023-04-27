@@ -1,0 +1,17 @@
+/* * {
+  border: 1px solid red;
+} */
+
+/* .Products {
+  display: flex;
+} */
+
+.Products-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.Products-title {
+  grid-column: 1 / -1;
+}
