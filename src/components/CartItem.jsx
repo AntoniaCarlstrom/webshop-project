@@ -11,8 +11,8 @@ export default function CartItem({ id, name, price, qty, updateQty }) {
 
   return (
     <div className="CartItem">
-      <div>{name}</div>
-      <div>{price}:-</div>
+      <div className="CartItemName">{name} </div>
+      <div className="CartItemPrice"> {price}:-</div>
       <div>
         <button onClick={subOne} disabled={qty <= 1}>
           -

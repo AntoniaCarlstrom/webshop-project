@@ -33,8 +33,10 @@ export default function Cart({ initialItems }) {
         ))}
         <h2 className="Cart-total">Grand total: {grandTotal}</h2>
       </div>
-      <button>KÖP</button>
-      <button>TÖM VARUKORGEN</button>
+      <div className="checkout">
+        <button>KÖP</button>
+        <button>TÖM VARUKORGEN</button>
+      </div>
     </div>
   );
 }
