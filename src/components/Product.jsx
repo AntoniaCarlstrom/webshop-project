@@ -1,4 +1,5 @@
 import "../css/Product.css";
+import { ShopContext } from "../context/shop-context";
 
 export default function Product({ id, name, imgSrc, price, qty }) {
   return (
@@ -7,7 +8,7 @@ export default function Product({ id, name, imgSrc, price, qty }) {
       <img src={imgSrc} alt={name}></img>
       <div>Pris: {price}</div>
       <div>Lagersaldo: {qty}</div>
-      <button>Add to cart</button>
+      {qty > 0 ? <button>Add to cart</button> : <button>Slut i lager</button>}
     </div>
   );
 }
