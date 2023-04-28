@@ -8,20 +8,48 @@ h1 {
   text-align: center;
 }
 
+.Navbar li {
+  display: inline;
+  margin-right: 5rem;
+}
+
 .Navbar {
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
+
 }
 
 .header {
-  text-align: center;
+  display: flex;
+  align-items: space-around;
+  margin-left: 20rem;
   flex-basis: 90%;
 
+}
+
+.header h1 {
+  align-self: flex-end;
 }
 
 .links {
   display: flex;
   align-items: flex-end;
+  flex-direction: row;
   margin: 0 200px 40px;
+}
+
+.links ul {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.links li {
+  font-weight: bold;
+}
+
+.links img {
+  width: 70px;
 }
