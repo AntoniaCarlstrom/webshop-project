@@ -1,7 +1,7 @@
 import React from "react";
 import CartItem from "./CartItem";
 import { useState, useEffect } from "react";
-import "./css/Cart.css";
+import "../css/Cart.css";
 
 export default function Cart({ initialItems }) {
   const [items, setItems] = useState(initialItems);

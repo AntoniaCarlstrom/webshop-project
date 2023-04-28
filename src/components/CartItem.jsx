@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/CartItem.css";
+import "../css/CartItem.css";
 
 export default function CartItem({ id, name, price, qty, updateQty }) {
   const addOne = () => {

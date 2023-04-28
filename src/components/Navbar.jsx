@@ -2,7 +2,7 @@ import "../css/Navbar.css";
 import logo from "../media/logo.png";
 import shoppingCart from "../media/shoppingCart.png";
 
-export default function Navbar() {
+export default function Navbar({ handleNavClick }) {
   return (
     <nav className="Navbar">
       <div className="header">
@@ -12,14 +12,12 @@ export default function Navbar() {
       <div className="links">
         <ul>
           <li></li>
+
           <li>
-            <a href="/products">Produkter</a>
+            <button onClick={() => handleNavClick("products")}>Products</button>
           </li>
           <li>
-            <a href="/cart">
-              {/* FIXA LÄNKARNA, BÖRJAT MED ROUTER! */}
-              <img src={shoppingCart} alt="shoppingCart" />
-            </a>
+            <button onClick={() => handleNavClick("cart")}>Cart</button>
           </li>
         </ul>
       </div>
